@@ -16,7 +16,7 @@ const Header = () => {
             <Link href="/" className="font-bold">
                 arjay<span className=" text-custom-fuchsia">m</span>
             </Link>
-            <ul className="flex gap-x-5">
+            {/* <ul className="flex gap-x-5">
                 {routes.map((route) => (
                     <li key={route.href}>
                         <Link href={route.href} className="flex items-center gap-1">
@@ -25,7 +25,7 @@ const Header = () => {
                         </Link>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
         </header>
     )
 }

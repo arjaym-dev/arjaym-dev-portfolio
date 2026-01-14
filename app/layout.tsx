@@ -25,7 +25,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${poppins.className} antialiased`}>
                 <Header />
-                {children}
+                <main className="w-full mx-auto px-[20]">{children}</main>
             </body>
         </html>
     )
