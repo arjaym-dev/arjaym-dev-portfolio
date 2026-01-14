@@ -63,6 +63,7 @@ const NavigationMenu = () => {
     return (
         <div className="">
             <motion.div
+                initial={false}
                 animate={open ? 'open' : 'closed'}
                 variants={parentVariants}
                 onClick={handleMenu}
