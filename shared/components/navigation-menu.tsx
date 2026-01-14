@@ -45,11 +45,10 @@ const NavigationMenu = () => {
     }
 
     const handleClickOutside = (event: MouseEvent) => {
-        if (open) {
-            const target = event.target as HTMLElement
-            if (!target.closest('.group')) {
-                setOpen(false)
-            }
+        const target = event.target as HTMLElement
+
+        if (!target.closest('.group')) {
+            setOpen(false)
         }
     }
 
@@ -61,13 +60,13 @@ const NavigationMenu = () => {
     }, [])
 
     return (
-        <div className="">
+        <div className="group">
             <motion.div
                 initial={false}
                 animate={open ? 'open' : 'closed'}
                 variants={parentVariants}
                 onClick={handleMenu}
-                className="group absolute right-0 border-2 rounded-tl-lg rounded-bl-lg hover:border-custom-fuchsia hover:bg-custom-fuchsia/20 transition-all overflow-hidden"
+                className=" absolute right-0 border-2 rounded-tl-lg rounded-bl-lg hover:border-custom-fuchsia hover:bg-custom-fuchsia/20 transition-all overflow-hidden"
             >
                 <motion.div variants={dotVariants} className="w-full flex justify-center">
                     <div className="w-max flex gap-x-1 py-1 cursor-pointer">
