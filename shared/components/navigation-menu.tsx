@@ -66,7 +66,7 @@ const NavigationMenu = () => {
                 animate={open ? 'open' : 'closed'}
                 variants={parentVariants}
                 onClick={handleMenu}
-                className=" absolute right-0 border-2 rounded-tl-lg rounded-bl-lg hover:border-custom-fuchsia hover:bg-custom-fuchsia/20 transition-all overflow-hidden"
+                className="bg-background absolute right-0 border-2 rounded-tl-lg rounded-bl-lg hover:border-custom-fuchsia hover:bg-custom-fuchsia/20 transition-all overflow-hidden"
             >
                 <motion.div variants={dotVariants} className="w-full flex justify-center">
                     <div className="w-max flex gap-x-1 py-1 cursor-pointer">
