@@ -6,7 +6,7 @@ export default function Home() {
         <div className="lg:w-4xl lg:mx-auto lg:flex pt-10 lg:justify-center lg:gap-x-20">
             <div className="w-full lg:w-auto">
                 <div className="w-[270] lg:w-[565] lg:h-[650] mx-auto h-[310] relative">
-                    <Image fill loading="eager" alt="Arjay Marquez" src={'/profile.webp'} sizes="auto" />
+                    <Image fill preload loading="eager" alt="Arjay Marquez" src={'/profile.webp'} sizes="auto" />
                 </div>
             </div>
             <div className="text-center lg:text-left mb-10">
