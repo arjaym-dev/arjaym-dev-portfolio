@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion, stagger } from 'motion/react'
 import { Birdhouse, CircleUserRound, Dumbbell, Map } from 'lucide-react'
 
+import { useDarkMode } from '../contexts/dark-mode'
 const routes: { href: string; label: string; icon: React.JSX.Element }[] = [
     { href: '/', label: 'Home', icon: <Birdhouse size={14} /> },
     { href: '/about', label: 'About', icon: <CircleUserRound size={14} /> },
@@ -13,7 +14,10 @@ const routes: { href: string; label: string; icon: React.JSX.Element }[] = [
 ]
 
 const Dots = () => {
-    return <div className="w-2 h-2 bg-foreground rounded-full group-hover:bg-custom-fuchsia transition-all"></div>
+    const { darkMode } = useDarkMode()
+
+    const dotColor = darkMode ? 'bg-custom-light' : 'bg-foreground'
+    return <div className={`w-2 h-2 ${dotColor} rounded-full group-hover:bg-custom-fuchsia transition-all`}></div>
 }
 
 const MenuItem = ({ route }: { route: { href: string; label: string; icon: React.JSX.Element } }) => {
@@ -66,7 +70,7 @@ const NavigationMenu = () => {
                 animate={open ? 'open' : 'closed'}
                 variants={parentVariants}
                 onClick={handleMenu}
-                className="bg-background absolute right-0 border-2 rounded-tl-lg rounded-bl-lg hover:border-custom-fuchsia hover:bg-custom-fuchsia/20 transition-all overflow-hidden"
+                className="absolute right-0 border-2 rounded-tl-lg rounded-bl-lg hover:border-custom-fuchsia hover:bg-custom-fuchsia/20 transition-all overflow-hidden"
             >
                 <motion.div variants={dotVariants} className="w-full flex justify-center">
                     <div className="w-max flex gap-x-1 py-1 cursor-pointer">

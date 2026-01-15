@@ -153,6 +153,7 @@ const ProjectItem = ({ item }: { item: IItems }) => {
                         loading="eager"
                         src={item.imgSrc}
                         alt={item.title}
+                        sizes="auto"
                         className="rounded object-cover"
                         quality={75}
                     />

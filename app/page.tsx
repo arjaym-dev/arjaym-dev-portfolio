@@ -11,10 +11,10 @@ export default function Home() {
             </div>
             <div className="text-center lg:text-left mb-10">
                 <h1 className="text-custom-h1 mt-[20] mb-[40] lg:mt-[60]">Idea/s To Reality.</h1>
-                <p className="dark:text-foreground/20 italic">
+                <p className="italic">
                     &quot;Software always remain softly for End users! But sometimes hardly to developers!&quot;
                 </p>
-                <p className="dark:text-foreground/20 italic mt-[25] mb-[50]">- Bananeza Pacifique</p>
+                <p className="italic mt-[25] mb-[50]">- Bananeza Pacifique</p>
                 <Link
                     href="/works"
                     className="px-[30] py-[15] w-[230] outline-0 border-2 border-solid rounded-xl hover:border-custom-fuchsia hover:bg-custom-fuchsia/10 transition-all"
