@@ -6,9 +6,19 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.bracketSpacing": true,
     "cSpell.words": [
+        "airsoft",
+        "apcdcorp",
         "Arjay",
         "arjaym",
+        "Bananeza",
+        "Dris",
+        "Erecord",
         "MERN",
-        "svgs"
+        "Mylife",
+        "Pacifique",
+        "profilesin",
+        "Shadcn",
+        "svgs",
+        "websat"
     ],
 }
