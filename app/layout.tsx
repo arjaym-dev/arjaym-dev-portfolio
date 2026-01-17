@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
 import Header from '@/shared/components/header'
-import DarkModeWrapper from '@/shared/layouts'
-
+import ThemeWrapper from './theme-wrapper'
 import './globals.css'
 
 const poppins = Poppins({
@@ -26,10 +25,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${poppins.className} antialiased`}>
-                <DarkModeWrapper>
+                <ThemeWrapper>
                     <Header />
-                    <main className="w-full mx-auto px-[20]">{children}</main>
-                </DarkModeWrapper>
+                    <main className="w-full min-h-(--custom-min-h) mx-auto px-[20]">{children}</main>
+                </ThemeWrapper>
             </body>
         </html>
     )

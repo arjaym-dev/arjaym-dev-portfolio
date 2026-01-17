@@ -1,7 +1,7 @@
 export default function Page() {
     const highlight = 'font-bold text-custom-fuchsia'
     return (
-        <div className="lg:w-4xl lg:mx-auto pt-10 mb-10">
+        <div className="lg:w-4xl lg:mx-auto pt-10 mb-10 text-sm">
             <div className="flex flex-col gap-y-4">
                 <p>
                     Hi, I&apos;m <span className={highlight}>Arjay Marquez</span>. I am a{' '}

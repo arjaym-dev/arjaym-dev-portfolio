@@ -22,6 +22,8 @@
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
     --text-custom-h1: clamp(40px, 8vw, 80px);
+
+    --custom-min-h: calc(100vh - 100px);
 }
 
 /* @media (prefers-color-scheme: dark) {

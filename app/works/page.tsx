@@ -143,7 +143,7 @@ const ProjectItem = ({ item }: { item: IItems }) => {
     return (
         <div className="group border-2 p-4 rounded flex flex-col justify-between hover:border-custom-fuchsia transition-all">
             <div>
-                <h3 className="group-hover:text-custom-fuchsia text-md font-semibold mb-2.5 transition-all">
+                <h3 className="group-hover:text-custom-fuchsia text-sm font-semibold mb-2.5 transition-all">
                     {item.title}
                 </h3>
 
@@ -159,7 +159,7 @@ const ProjectItem = ({ item }: { item: IItems }) => {
                     />
                 </div>
 
-                <p className="text-sm my-2.5">{item.description}</p>
+                <p className="text-xs my-2.5">{item.description}</p>
             </div>
             <div className="w-full flex flex-wrap gap-2 text-xs">
                 {item.tech.map((tech) => (
