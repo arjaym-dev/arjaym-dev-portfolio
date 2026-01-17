@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { motion, stagger } from 'motion/react'
 import { Birdhouse, CircleUserRound, Dumbbell, Map } from 'lucide-react'
 
-import { useDarkMode } from '../contexts/dark-mode'
 const routes: { href: string; label: string; icon: React.JSX.Element }[] = [
     { href: '/', label: 'Home', icon: <Birdhouse size={14} /> },
     { href: '/about', label: 'About', icon: <CircleUserRound size={14} /> },
@@ -14,10 +13,11 @@ const routes: { href: string; label: string; icon: React.JSX.Element }[] = [
 ]
 
 const Dots = () => {
-    const { darkMode } = useDarkMode()
-
-    const dotColor = darkMode ? 'bg-custom-light' : 'bg-foreground'
-    return <div className={`w-2 h-2 ${dotColor} rounded-full group-hover:bg-custom-fuchsia transition-all`}></div>
+    return (
+        <div
+            className={`w-2 h-2 bg-custom-dark dark:bg-custom-light rounded-full group-hover:bg-custom-fuchsia transition-all`}
+        ></div>
+    )
 }
 
 const MenuItem = ({ route }: { route: { href: string; label: string; icon: React.JSX.Element } }) => {
