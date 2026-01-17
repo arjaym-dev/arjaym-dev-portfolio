@@ -4,18 +4,17 @@ import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 
 import { getThemeClass } from '@/shared/utils/theme'
-const cookies = async () => {
-    return await cookieStore.get('theme')
-}
+import stringCollection from '@/shared/utils/string'
 
 const ThemeSwitch = () => {
     const [theme, setTheme] = useState('light')
 
     useEffect(() => {
-        const fetchTheme = async () => {
-            const cookieTheme = await cookies()
-            setTheme(cookieTheme?.value || 'light')
+        function fetchTheme() {
+            const { theme: cookieTheme = 'light' } = stringCollection.cookiesStrToObj(document.cookie)
+            setTheme(cookieTheme)
         }
+
         fetchTheme()
     }, [])
 
