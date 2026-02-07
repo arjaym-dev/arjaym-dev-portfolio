@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Home() {
     return (
-        <div className="lg:w-4xl lg:mx-auto lg:flex pt-10 lg:justify-center lg:gap-x-20">
+        <div className="lg:w-4xl lg:mx-auto lg:flex pt-10 pb-11 lg:justify-center lg:gap-x-20">
             <div className="w-full lg:w-auto">
                 <div className="w-[270] lg:w-[565] lg:h-[650] mx-auto h-[310] relative">
                     <Image fill preload loading="eager" alt="Arjay Marquez" src={'/profile.webp'} sizes="auto" />

@@ -8,5 +8,5 @@ export default async function ThemeWrapper({ children }: { children: React.React
 
     const themeClass = getThemeClass(theme)
 
-    return <div className={`theme-wrapper flex flex-col min-h-screen ${themeClass} transition-all`}>{children}</div>
+    return <div className={'theme-wrapper transition-all ' + themeClass}>{children}</div>
 }

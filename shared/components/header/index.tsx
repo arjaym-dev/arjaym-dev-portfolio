@@ -7,12 +7,14 @@ const Header = () => {
     return (
         <>
             <header className="w-full px-[50] h-[100] flex items-center justify-between">
-                <Link href="/" className="font-bold">
-                    arjay<span className=" text-custom-fuchsia">m</span>
-                </Link>
+                <div className="relative">
+                    <ThemeSwitch />
+                    <Link href="/" className="font-bold">
+                        arjay<span className=" text-custom-fuchsia">m</span>
+                    </Link>
+                </div>
                 <NavigationMenu />
             </header>
-            <ThemeSwitch />
         </>
     )
 }

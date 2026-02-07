@@ -195,7 +195,7 @@ export default function Page() {
     }
 
     return (
-        <div className="lg:w-4xl lg:mx-auto pt-10 mb-10">
+        <div className="lg:w-4xl lg:mx-auto pt-10 pb-10">
             <Category category={category} handleCategory={handleCategory} />
             <Projects category={category} />
         </div>
